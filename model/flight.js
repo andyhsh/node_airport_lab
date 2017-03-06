@@ -5,7 +5,7 @@ var flightSchema = new mongoose.Schema({
 	from: String,
 	to: String,
 	airline: String,
-	passengers: Array
+	passengers: [{type: mongoose.Schema.ObjectId, ref: 'Passenger'}]
 });
 
 var Flight = mongoose.model('flight', flightSchema);

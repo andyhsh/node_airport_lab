@@ -3,7 +3,7 @@ var Flight = require('./flight');
 
 var terminalSchema = new mongoose.Schema({
 	name: String,
-	flights: Array,
+	flights: [{type: mongoose.Schema.ObjectId, ref: 'Flight'}],
 	capacity: Number
 });
 

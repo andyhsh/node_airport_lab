@@ -13,13 +13,13 @@ var flight1 = new Flight();
 flight1.from = 'CDG France';
 flight1.to = 'JFK New-York, USA';
 flight1.airline = 'American Airlines';
-flight1.passengers = 'None';
+flight1.passengers = [];
 
 var flight2 = new Flight();
 flight2.from = 'Heathrow UK';
 flight2.to = 'JFK New-York, USA';
 flight2.airline = 'British Airways';
-flight2.passengers = 'None';
+flight2.passengers = [];
 
 var airport1 = new Airport();
 airport1.name = 'JFK';
@@ -55,7 +55,7 @@ airport1.terminals.push(terminal1);
 		console.log(currentUser);
 	});
 
-	flight2.save(functionins(err, currentUser){
+	flight2.save(function(err, currentUser){
 		if(err){
 			console.log('Error', err);
 		}
